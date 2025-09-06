@@ -1,12 +1,15 @@
+/* 🎨 Color Palette */
 :root {
-  --maroon: #800000; /* deep maroon shade */
-  --red: #b22222; /* firebrick red */
+  --maroon: #800000;
+  --red: #b22222;
   --white: #ffffff;
   --light-bg: #f9f9f9;
   --text: #333333;
-  --maxw: 1000px;
+  --gray: #666666;
+  --maxw: 1100px;
 }
 
+/* Reset + Basics */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,7 +20,7 @@ body {
   font-family: 'Segoe UI', Tahoma, sans-serif;
   background-color: var(--light-bg);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .container {
@@ -26,7 +29,47 @@ body {
   padding: 20px;
 }
 
-/* Header */
+/* ---------------------- */
+/* 🔹 Cover Page (index)  */
+/* ---------------------- */
+.hero {
+  background: linear-gradient(135deg, var(--maroon), var(--red));
+  color: var(--white);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #f1f1f1;
+}
+
+.cover-nav .btn {
+  display: inline-block;
+  background-color: var(--white);
+  color: var(--maroon);
+  padding: 12px 25px;
+  margin: 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.cover-nav .btn:hover {
+  background-color: var(--light-bg);
+  color: var(--red);
+}
+
+/* ---------------------- */
+/* 🔹 Header Navigation   */
+/* ---------------------- */
 .site-header {
   background-color: var(--maroon);
   color: var(--white);
@@ -34,7 +77,6 @@ body {
 }
 
 .site-header h1 {
-  margin: 0;
   font-size: 22px;
 }
 
@@ -46,67 +88,81 @@ body {
   color: var(--white);
   text-decoration: none;
   margin-right: 15px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .site-header nav a:hover {
   text-decoration: underline;
 }
 
-/* Hero Section */
-.hero {
-  background-color: var(--red);
-  color: var(--white);
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.hero h2 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.btn {
-  background-color: var(--white);
-  color: var(--maroon);
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.btn:hover {
-  background-color: var(--light-bg);
-}
-
-/* Sections */
+/* ---------------------- */
+/* 🔹 Sections / Pages    */
+/* ---------------------- */
 section {
-  margin: 30px 0;
+  margin: 40px 0;
 }
 
-h3 {
+h2, h3 {
   color: var(--maroon);
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 15px;
+  color: var(--gray);
 }
 
 ul, ol {
-  padding-left: 20px;
+  padding-left: 25px;
+  margin-bottom: 20px;
 }
 
-ul li {
-  margin-bottom: 10px;
+/* Card style (for committees / organizers etc.) */
+.card {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 15px 0;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
 
-/* Footer */
+.card h4 {
+  margin-bottom: 8px;
+  color: var(--red);
+}
+
+/* ---------------------- */
+/* 🔹 Footer              */
+/* ---------------------- */
 .site-footer {
   background-color: var(--maroon);
   color: var(--white);
   text-align: center;
-  padding: 15px 0;
-  margin-top: 30px;
+  padding: 15px 10px;
+  margin-top: 50px;
+  font-size: 14px;
+}
+
+/* ---------------------- */
+/* 🔹 Responsive Design   */
+/* ---------------------- */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .cover-nav .btn {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+  }
+
+  .site-header nav a {
+    display: inline-block;
+    margin: 8px;
+  }
 }
