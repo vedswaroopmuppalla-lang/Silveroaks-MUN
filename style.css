@@ -1,0 +1,112 @@
+:root {
+  --maroon: #800000; /* deep maroon shade */
+  --red: #b22222; /* firebrick red */
+  --white: #ffffff;
+  --light-bg: #f9f9f9;
+  --text: #333333;
+  --maxw: 1000px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: var(--maxw);
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+.site-header {
+  background-color: var(--maroon);
+  color: var(--white);
+  padding: 15px 20px;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.site-header nav {
+  margin-top: 10px;
+}
+
+.site-header nav a {
+  color: var(--white);
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.site-header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background-color: var(--red);
+  color: var(--white);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: var(--white);
+  color: var(--maroon);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: var(--light-bg);
+}
+
+/* Sections */
+section {
+  margin: 30px 0;
+}
+
+h3 {
+  color: var(--maroon);
+  margin-bottom: 10px;
+}
+
+ul, ol {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--maroon);
+  color: var(--white);
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+}
